@@ -1,0 +1,66 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"  type="text/css" href="{% static 'style.css' %}" >
+</head>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Adding Data to Data base</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label>Movie Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="name" placeholder="Enter Movie Name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label> Director</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="dirc" placeholder="Enter Director's name">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label >Description</label>
+    </div>
+    <div class="col-75">
+      <textarea  name="desc" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label >Year</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="year" placeholder="Enter the year of movie released">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label >Poster</label>
+    </div>
+    <div class="col-75">
+      <input type="file" name="img" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+
+</form>
+</html>
